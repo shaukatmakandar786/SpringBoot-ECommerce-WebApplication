@@ -84,7 +84,7 @@ public class UserTest {
 		Role ediRole=new Role(3);
 		Role salesRole=new Role(2);
 		
-		user.getRolse().remove(ediRole);
+		user.getRoles().remove(ediRole);
 		user.addRole(salesRole);
 		
 		repository.save(user);

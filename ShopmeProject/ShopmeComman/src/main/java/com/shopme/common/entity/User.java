@@ -51,13 +51,13 @@ public class User {
 				joinColumns = @JoinColumn(name="user_id"),
 				inverseJoinColumns = @JoinColumn(name="role_id")
 			)
-	private Set<Role> rolse=new HashSet<>();
+	private Set<Role> roles=new HashSet<>();
 	
 	private boolean enabled;
 	
 	public void addRole(Role role)
 	{
-		this.rolse.add(role);
+		this.roles.add(role);
 	}
 
 	public User(String email, String firstName, String lastName, String password) {
