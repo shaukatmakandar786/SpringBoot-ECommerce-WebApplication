@@ -6900,3 +6900,39 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 17:54:05.052
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2649, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 17:54:05.053
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2649, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 17:54:05.054
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2649, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 17:54:05.511
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2649, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 18:03:41.593
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2687, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 18:03:41.595
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2687, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 18:03:41.622
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2687, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-07-14 18:03:42.094
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 2687, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-07-14 18:51:37.467
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
