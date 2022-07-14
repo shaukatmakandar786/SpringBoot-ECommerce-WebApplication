@@ -20,38 +20,38 @@ public class RoleRepositoryTest {
 	
 	@Test
 	public void createFirstRole() {
-		Role role=Role.builder()
-				.name("shaukat")
-				.description("manage everything")
-				.build();
-		
-		Role saveRole = repository.save(role);
-		assertThat(saveRole.getId()).isGreaterThan(0);
+//		Role role=Role.builder()
+//				.name("shaukat")
+//				.description("manage everything")
+//				.build();
+//		
+//		Role saveRole = repository.save(role);
+//		assertThat(saveRole.getId()).isGreaterThan(0);
 	}
 	
 	@Test
 	public void createRestRoles()
 	{
-		Role salesRole=Role.builder()
-				.name("Salesperson")
-				.description("manage product price, customer, shipping, orders and sales report")
-				.build();
-		
-		Role editorRole=Role.builder()
-				.name("Editor")
-				.description("manage categories, brands, product,articles and menus")
-				.build();
-		
-		Role shipperRole=Role.builder()
-				.name("Shipper")
-				.description("shipper, view product, view order,update order status")
-				.build();
-		
-		Role assistantRole=Role.builder()
-				.name("Assistant")
-				.description("manage questions and reviews")
-				.build();
-		
-		repository.saveAll(List.of(salesRole,editorRole,shipperRole,assistantRole));
+//		Role salesRole=Role.builder()
+//				.name("Salesperson")
+//				.description("manage product price, customer, shipping, orders and sales report")
+//				.build();
+//		
+//		Role editorRole=Role.builder()
+//				.name("Editor")
+//				.description("manage categories, brands, product,articles and menus")
+//				.build();
+//		
+//		Role shipperRole=Role.builder()
+//				.name("Shipper")
+//				.description("shipper, view product, view order,update order status")
+//				.build();
+//		
+//		Role assistantRole=Role.builder()
+//				.name("Assistant")
+//				.description("manage questions and reviews")
+//				.build();
+//		
+//		repository.saveAll(List.of(salesRole,editorRole,shipperRole,assistantRole));
 	}
 }

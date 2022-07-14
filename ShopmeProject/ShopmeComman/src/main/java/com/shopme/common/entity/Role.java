@@ -7,13 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 	
 @Entity
 @Table(name="role")
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Role {
 
 	@Id
@@ -26,4 +29,10 @@ public class Role {
 	@Column(length = 150, nullable = false)
 	private String description;
 
+	public Role(Integer id) {
+		super();
+		this.id = id;
+	}
+
+	
 }
