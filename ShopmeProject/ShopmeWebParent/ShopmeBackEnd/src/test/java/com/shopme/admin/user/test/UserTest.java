@@ -67,5 +67,33 @@ public class UserTest {
 	public void testUserById() {
 		User user = repository.findById(1).get();
 		System.out.println(user);
+		assertThat(user).isNotNull();
+	}
+	
+	@Test
+	public void testUpdateUserDetails() {
+		User user = repository.findById(1).get();
+		user.setEnabled(true);
+		repository.save(user);
+	}
+	
+	@Test
+	public void testUpdateUserRoles()
+	{
+		User user = repository.findById(2).get();
+		Role ediRole=new Role(3);
+		Role salesRole=new Role(2);
+		
+		user.getRolse().remove(ediRole);
+		user.addRole(salesRole);
+		
+		repository.save(user);
+	}
+	
+	@Test
+	public void testDeleteUser()
+	{
+		repository.deleteById(4);
+		
 	}
 }
