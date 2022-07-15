@@ -33,5 +33,11 @@ public class UserService {
 		  
 		  return (List<Role>) findAll;
 	}
+
+	public void save(User user) {
+		
+		User save = repository.save(user);
+		System.out.println(save);
+	}
 	
 }
