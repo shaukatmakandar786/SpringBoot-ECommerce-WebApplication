@@ -2,6 +2,7 @@ package com.shopme.admin.user.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -95,5 +96,12 @@ public class UserTest {
 	{
 		repository.deleteById(4);
 		
+	}
+	
+	@Test
+	public void testUserByEmail() {
+		List<User> findByEmail = repository.findByEmail("lmn@gmail.com");
+		System.out.println(findByEmail);
+		assertThat(findByEmail.get(0)).isNotNull();
 	}
 }

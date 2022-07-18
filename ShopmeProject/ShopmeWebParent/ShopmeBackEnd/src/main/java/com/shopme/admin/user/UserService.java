@@ -49,4 +49,9 @@ public class UserService {
 		user.setPassword(encode);
 	}
 	
+	public boolean isUserUnique(String email) {
+		
+		return repository.findByEmail(email).isEmpty();
+	}
+	
 }

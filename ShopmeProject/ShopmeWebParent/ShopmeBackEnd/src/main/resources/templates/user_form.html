@@ -66,7 +66,7 @@
     </div>
      
      <form th:action="@{/users/save}" method="post" style="max-width: 700px; margin:0 auto"
-     	th:object="${user}">
+     	th:object="${user}" onsubmit="return checkEmailUnique(this)">
      	<div class="border border-secondary rounded p-3">
      		<div class="form-group row">
      			<label class="col-sm-4 col-form-label">Email Id</label>
@@ -141,6 +141,28 @@
 		
 		});
 	});
+	
+	function checkEmailUnique(form){
+		
+		
+		url="[[@{/users/check_email}]]";
+		
+		userEmail=$("#email").val();
+		csrfValue=$("input[name='_csrf']").val();
+		params={email:userEmail,_csrf:csrfValue};
+		
+		$.post(url,params,function(response){
+			
+			if(response=="OK"){
+				form.submit();
+			}
+			else if(response=="Duplicate"){
+					alert("There is another user having the email "+userEmail);
+			}
+		});
+		
+		return false;
+	}
 	
 </script>
 </html>
